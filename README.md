@@ -1,8 +1,17 @@
-# React + Vite
+# Traffic Light
+In traffic light, the lights switch from green to yellow to red after predetermined intervals and loop indefinitely..<br/><br/>
+## Live Demo
+**Click URL:** [Netflix GPT](https://netflix-gpt.netlify.app)<br/><br/>
+Note : [First Signup to explore app]<br/><br/>
+## Used Library, Framework and API
+- ***React JS*** <br/>
+- ***Tailwind CSS***       : For beautiful UI and Responsiveness.<br/>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## ScreenShots
+- **Login Page**<br/><br/>
+![IMG_20240629_132215](https://github.com/shakibsiddiqui1/netflix-gpt/assets/75198727/29950923-a979-4263-bba8-b3febfb94182)
+<br/><br/>
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+##  💖 Support This Project
+If you have any questions, suggestions, or just want to connect, feel free to reach out.<br/><br/><br/>
+Made with ❤️ and React.

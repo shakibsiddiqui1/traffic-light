@@ -2,7 +2,6 @@
 In traffic light, the lights switch from green to yellow to red after predetermined intervals and loop indefinitely..<br/><br/>
 ## Live Demo
 **Click URL:** [Traffic Signal](https://traffic-light-signal.netlify.app/)<br/><br/>
-Note : [First Signup to explore app]<br/><br/>
 ## Used Library, Framework and API
 - ***React JS*** <br/>
 - ***Tailwind CSS***       : For beautiful UI and Responsiveness.<br/>

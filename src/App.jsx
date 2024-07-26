@@ -1,30 +1,30 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import {trafficLight} from '../utils/constants.js'
 
 function App() {
 
-  const [color, setColor] = useState('yellow')
+  const [activeSignal, setActiveSignal] = useState('green')
+  const light = trafficLight.find((lig)=>lig.color===activeSignal)
 
   useEffect(()=>{
     const timerId = setTimeout(()=>{
-      if(color==='red')
-        setColor('yellow')
-      else if(color==='yellow')
-        setColor('green')
-      else
-        setColor('red')
-    },2000)
+      setActiveSignal(light.next);
+    }, light.wait)
 
-    return ()=>clearTimeout(timerId)
-
+    return ()=>{
+      clearTimeout(timerId)
+    }
   })
   return (
       <>
-        <div className='flex flex-col items-center w-24 h-56 justify-around bg-black rounded-lg ml-56'>
-            <div className={`w-10 h-10 rounded-full  ${color === 'red' ? 'bg-red-600' : 'bg-gray-500'}`}></div>
-            <div className={`w-10 h-10 rounded-full  ${color === 'yellow' ? 'bg-yellow-400' : 'bg-gray-500'}`}></div>
-            <div className={`w-10 h-10 rounded-full  ${color === 'green' ? 'bg-green-700' : 'bg-gray-500'}`}></div>
-        </div> 
+        <div className='flex h-screen w-full justify-center items-center'>
+          <div className='flex flex-col items-center w-32 h-96 justify-around bg-black rounded-xl '>
+              {
+                trafficLight.map((light)=><div key={light.color} className="w-20 h-20 rounded-full" style={{backgroundColor : activeSignal === light.color ? light.color : 'gray'}}></div>)
+              }
+          </div> 
+        </div>
       </>
   )
 }
